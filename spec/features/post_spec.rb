@@ -16,6 +16,8 @@ end
 describe 'creation' do 
   before do 
     visit new_post_path
+    user = User.create(first_name: "john", last_name: "snow", email: 'test@keppo.com', password: "123123", password_confirmation: "123123")
+    login_as(user, :scope => :user)
   end
   it 'has a new form that can be reached' do 
     expect(page.status_code).to eq(200)
@@ -26,5 +28,13 @@ describe 'creation' do
     fill_in 'post[rationale]', with: "Hello"
     click_on "Save"
     expect(page).to have_content("Hello")
+  end
+
+  it 'will have user associated it' do 
+    fill_in 'post[date]', with: Date.today.strftime("%m/%d/%Y")
+    fill_in 'post[rationale]', with: "User Association"
+    click_on "Save"
+
+    expect(User.last.posts.last.rationale).to eq("User Association")
   end
 end
