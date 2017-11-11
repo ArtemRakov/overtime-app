@@ -1,12 +1,10 @@
-<div class="wrapper-new-post">
-  <div class="container">
-    <h2>Create new post </h2>
-    <%= simple_form_for @post do |f| %>
-      <%= f.input :date, as: :string, input_html: { value: Date.today.strftime("%d/%m/%Y") }  %>
-      <%= f.input :rationale, as: :text %>
-      <%= f.button :submit, "Save", class: 'btn-primary' %>
-    <% end %>
-  </div>
+<div class="container">
+  <h2>Create new post </h2>
+  <%= simple_form_for @post do |f| %>
+    <%= f.input :date, as: :string, input_html: { value: Date.today.strftime("%d/%m/%Y") }  %>
+    <%= f.input :rationale, as: :text %>
+    <%= f.button :submit, "Save", class: 'btn-primary' %>
+  <% end %>
 </div>
 
 <% content_for(:js) do  %>

@@ -8,8 +8,15 @@
   </head>
 
   <body>
-    <%= yield %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= yield(:js)  %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <%= render 'shared/navbar' %>
+          <%= yield %>
+          <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+          <%= yield(:js)  %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
