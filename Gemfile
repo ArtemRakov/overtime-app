@@ -31,6 +31,5 @@ gem 'devise', '~> 4.3'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'jquery-rails'
-gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 gem "font-awesome-rails"
 gem 'bootstrap-datepicker-rails'
