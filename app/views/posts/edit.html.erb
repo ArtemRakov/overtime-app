@@ -1,10 +1,6 @@
 <div class="container">
   <h2>Edit the post </h2>
-  <%= simple_form_for @post, method: :patch  do |f| %>
-    <%= f.input :date, as: :string, input_html: { value: Date.today.strftime("%d/%m/%Y") }  %>
-    <%= f.input :rationale, as: :text %>
-    <%= f.button :submit, "Save", class: 'btn-primary' %>
-  <% end %>
+  <%= render 'shared/form' %>
 </div>
 
 <% content_for(:js) do  %>

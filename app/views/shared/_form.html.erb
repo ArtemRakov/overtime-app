@@ -1,0 +1,5 @@
+<%= simple_form_for @post do |f| %>
+    <%= f.input :date, as: :string, input_html: { value: Date.today.strftime("%d/%m/%Y") }  %>
+    <%= f.input :rationale, as: :text %>
+    <%= f.button :submit, "Save", class: 'btn-primary' %>
+  <% end %>
