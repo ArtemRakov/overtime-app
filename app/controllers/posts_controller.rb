@@ -29,10 +29,15 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to post_path(@post)
+      redirect_to post_path(@post), notice: "Your post was update"
     else
       render :edit
     end
+  end
+
+  def destroy
+    @post.delete
+    redirect_to posts_path,  notice: "Your post was deleted"
   end
 
   private
