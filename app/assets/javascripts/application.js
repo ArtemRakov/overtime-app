@@ -14,5 +14,6 @@
 //= require turbolinks
 //= require jquery3
 //= require bootstrap-sprockets
+//= require gritter
 //= require bootstrap-datepicker
 //= require_tree .
