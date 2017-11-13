@@ -35,3 +35,5 @@ gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'bootstrap-datepicker-rails'
 gem 'gritter'
+gem "administrate"
+gem 'bourbon'
