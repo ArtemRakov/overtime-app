@@ -23,7 +23,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    
+
   end
 
   def update
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:date, :rationale)
+    params.require(:post).permit(:date, :rationale, :status)
   end
 
   def set_post
