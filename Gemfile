@@ -14,10 +14,12 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_bot_rails'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
 end
 
 group :development do
@@ -25,6 +27,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'launchy'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -32,8 +35,8 @@ gem 'devise', '~> 4.3'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'jquery-rails'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 gem 'bootstrap-datepicker-rails'
 gem 'gritter'
-gem "administrate"
+gem 'administrate'
 gem 'bourbon'

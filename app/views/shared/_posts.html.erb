@@ -12,13 +12,13 @@
     <%= truncate(post.rationale) %>
   </td>
   <td>
-    <% if current_user == post.user %>
+    <%# if current_user == post.user %>
       <%= link_to "Edit", edit_post_path(post), id: "edit_#{post.id}" %>
-    <% end %>
+    <%# end %>
   </td>
   <td>
-    <% if current_user == post.user %>
+    <%# if current_user == post.user %>
       <%= link_to "Delete", post_path(post), method: :delete, id: "delete_post_#{post.id}_from_index", data: {confirm: "Are you sure?"} %>
-    <% end %>
+    <%# end %>
   </td>
 </tr>
