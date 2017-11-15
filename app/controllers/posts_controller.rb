@@ -8,26 +8,6 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  def create
-    @post = Post.new(post_params)
-    @post.user = current_user
-    if @post.save
-      redirect_to @post, notice: "Your post was created"
-    else
-      render :new
-    end
-  end
-
-  def show
-
-  end
-
-  def edit
-    authorize @post
-  end
-
-  def update
-    authorize @post
     if @post.update(post_params)
       redirect_to post_path(@post), notice: "Your post was update"
     else
