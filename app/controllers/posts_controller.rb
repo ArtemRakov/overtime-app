@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :destroy]
+  before_action :set_post, only: [:show, :edit, :destroy, :update]
   def index
     @posts = Post.posts_by current_user
   end
@@ -27,7 +27,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
     authorize @post
     if @post.update(post_params)
       redirect_to post_path(@post), notice: "Your post was update"
