@@ -31,17 +31,14 @@
             </th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <% @posts.each do |post|  %>
-              <%= render 'shared/posts', post: post %>
-            <% end %>
-          </tr>
+        <tbody id='posts'>
+          <%= render @posts %>
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
-
-<%= paginate @posts %>
+<div id="paginator">
+  <%= paginate @posts, remote: true %>
+</div>
