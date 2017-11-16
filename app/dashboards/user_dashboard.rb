@@ -6,6 +6,7 @@ class UserDashboard < Administrate::BaseDashboard
     id: Field::Number.with_options(searchable: false),
     email: Field::String.with_options(searchable: true),
     password: Field::String.with_options(searchable: false),
+    phone: Field::String.with_options(searchable: false),
     sign_in_count: Field::Number.with_options(searchable: false),
     current_sign_in_at: Field::DateTime.with_options(searchable: false),
     last_sign_in_at: Field::DateTime.with_options(searchable: false),
@@ -29,6 +30,7 @@ class UserDashboard < Administrate::BaseDashboard
     :posts,
     :id,
     :email,
+    :phone,
     :sign_in_count,
     :current_sign_in_at,
     :last_sign_in_at,
@@ -46,5 +48,6 @@ class UserDashboard < Administrate::BaseDashboard
     :password,
     :first_name,
     :last_name,
+    :phone
   ].freeze
 end
