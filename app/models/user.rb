@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   validates :first_name, :last_name, :phone, presence: true
   has_many :posts
+  has_many :audit_logs
 
   PHONE_REGEX = /\b^[0-9]{10}\b/
 
