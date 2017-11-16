@@ -4,7 +4,7 @@ user = User.create(first_name: "john",
                     email: 'test@test.com',
                     password: "123123",
                     password_confirmation: "123123",
-                    number: "555")
+                    number: "1234567890")
 
 
 user = AdmiUser.create(first_name: "Admin",
@@ -12,7 +12,7 @@ user = AdmiUser.create(first_name: "Admin",
                     email: 'admin@test.com',
                     password: "123123",
                     password_confirmation: "123123",
-                    number: "555")
+                    number: "1234567890")
 
 puts "Admin and User was created"
 
