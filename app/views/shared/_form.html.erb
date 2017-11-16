@@ -1,6 +1,7 @@
 <%= simple_form_for @post do |f| %>
     <%= f.input :date, as: :string, input_html: { value: Date.today.strftime("%d/%m/%Y") }  %>
     <%= f.input :rationale, as: :text %>
+    <%= f.input :overtime_request %>
     <%= render 'shared/status', f: f if current_user.type == "AdminUser" %>
     <%= f.button :submit, "Save", class: 'btn-primary' %>
   <% end %>
