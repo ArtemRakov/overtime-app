@@ -7,7 +7,7 @@ user = User.create(first_name: "john",
                     phone: "1234567890")
 
 
-user = AdminUser.create(first_name: "Admin",
+admin_user = AdminUser.create(first_name: "Admin",
                     last_name: "Test",
                     email: 'admin@test.com',
                     password: "123123",
