@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :audit_logs, expect: [:new, :edit, :destroy] do
     member do
-
+      get :confirm
     end
   end
   namespace :admin do
