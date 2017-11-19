@@ -16,8 +16,13 @@
   color: white;
   margin: 12px 42px;
   padding: 15px;
+  &:hover {
+    background-color: #172b63;
+  }
 }
 
 .pending-details {
   font-weight: 900;
 }
+
+
