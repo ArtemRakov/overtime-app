@@ -5,6 +5,7 @@ namespace :notification do
       employee = Employee.all
       notification_message = "Please log into the overtime management dashboard"
       employees.each do |employee|
+        AuditLog.create!(user: employee)
         SmsTool.send_sms(number: employee.phone, message: notification_message )
       end
     end
