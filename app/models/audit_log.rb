@@ -4,6 +4,7 @@ class AuditLog < ApplicationRecord
   validates :start_date, :status, presence: true
   after_initialize :set_defaults
 
+  scope :by_start_date, ->{order(start_date: :desc)}
   enum status: { pending: 0, confirmed: 1 }
 
   before_update :set_end_date, if: :confirmed?
