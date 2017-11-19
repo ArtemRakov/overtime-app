@@ -6,8 +6,8 @@ class Post < ApplicationRecord
 
   scope :posts_by, ->(user) { where(user: user) }
 
-  after_save :confirm_audit_log if :submitted?
-  after_save :un_confirm_audit_log if :rejected?
+  after_save :confirm_audit_log, if: :submitted?
+  after_save :un_confirm_audit_log, if: :rejected?
 
   private
     def un_confirm_audit_log
