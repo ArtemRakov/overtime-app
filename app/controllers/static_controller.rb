@@ -1,5 +1,5 @@
 class StaticController < ApplicationController
   def homepage
-    @posts = AuditLog.where(status: 'pending')
+    @pending_approvals = Post.where(status: 'submitted')
   end
 end
