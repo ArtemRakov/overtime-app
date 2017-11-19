@@ -1,5 +1,5 @@
 
-user = User.create(first_name: "john",
+user = Employee.create(first_name: "john",
                     last_name: "snow",
                     email: 'test@test.com',
                     password: "123123",
