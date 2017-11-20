@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :user
-  validates :rationale, :date, :daily_hours, presence: true
+  validates :work_performed, :date, :daily_hours, presence: true
   validates :daily_hours, numericality: { greater_than: 0.0 }
   enum status: { submitted: 0, approved: 1, rejected: 2 }
 
