@@ -3,7 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  validates :first_name, :last_name, :phone, presence: true
+  validates :first_name, :last_name, :phone, :ssn, :company, presence: true
+
   has_many :posts
   has_many :audit_logs
 
@@ -14,6 +15,7 @@ class User < ApplicationRecord
 
   validates :phone, format: { with: PHONE_REGEX, message: "only allows 10 integers" }
   validates :phone, length: { is: 10 }
+  validates :ssn, length: { is: 4 }
 
   def full_name
     "#{last_name.upcase}, #{first_name.upcase}"

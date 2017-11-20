@@ -35,6 +35,26 @@ RSpec.describe User, type: :model do
       @user.phone = '12345678901'
       expect(@user).to_not be_valid
     end
+
+    it 'requires ssn' do
+      @user.ssn = nil
+      expect(@user).to_not be_valid
+    end
+
+    it 'ssn can only have integers' do
+      @user.ssn = 'he12'
+      expect(@user).to_not be_valid
+    end
+
+    it 'ssn attr only have 4 chars' do
+      @user.ssn = 12345
+      expect(@user).to_not be_valid
+    end
+
+    it 'requires a company' do
+      @user.company = nil
+      expect(@user).to_not be_valid
+    end
   end
 
   describe 'custom name methods' do
@@ -48,8 +68,8 @@ RSpec.describe User, type: :model do
       employee_1 = FactoryBot.create(:user)
       employee_2 = FactoryBot.create(:user)
       admin = FactoryBot.create(:admin_user)
-      Hand.create!(user_id: admin.id, hand_id: employee_1.id)
-      Hand.create!(user_id: admin.id, hand_id: employee_2.id)
+      Hand.create!(user: admin, hand: employee_1)
+      Hand.create!(user: admin, hand: employee_2)
 
       expect(admin.hands.count).to eq(2)
     end

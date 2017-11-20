@@ -4,7 +4,9 @@ user = Employee.create(first_name: "john",
                     email: 'test@test.com',
                     password: "123123",
                     password_confirmation: "123123",
-                    phone: "1234567890")
+                    phone: "1234567890",
+                    ssn: 1234,
+                    company: "Ruby")
 
 
 admin_user = AdminUser.create(first_name: "Admin",
@@ -12,7 +14,9 @@ admin_user = AdminUser.create(first_name: "Admin",
                     email: 'admin@test.com',
                     password: "123123",
                     password_confirmation: "123123",
-                    phone: "1234567890")
+                    phone: "1234567890",
+                    ssn: 1234,
+                    company: "Ruby")
 
 puts "Admin and User was created"
 
