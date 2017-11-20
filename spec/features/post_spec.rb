@@ -41,7 +41,6 @@ describe 'navigate' do
     end
   end
 
-
   describe 'delete' do
     it 'can be deleted' do
       logout(:user)
