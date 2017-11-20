@@ -44,4 +44,6 @@ gem 'bourbon'
 gem 'pundit'
 gem 'twilio-ruby', '~> 5.4', '>= 5.4.5'
 gem "figaro"
+gem 'newrelic_rpm'
+
 
