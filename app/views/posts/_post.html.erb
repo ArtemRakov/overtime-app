@@ -1,17 +1,11 @@
 <tr>
   <td>
-    <%= post.id %>
-  </td>
-  <td>
     <%= post.overtime_request.to_f %>
   </td>
   <td>
     <%= post.date.strftime("%m/%d/%Y")  %>
   </td>
-  <td>
-    <%= post.user.full_name %>
-  </td>
-  <td>
+  <td class="hidden-xs">
     <%= link_to truncate(post.rationale), post_path(post) %>
   </td>
   <td>
